@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: https://ordanael.github.io/sitemap.xml
