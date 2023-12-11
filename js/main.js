@@ -19,7 +19,7 @@ contactFormElement.addEventListener("submit", async (e) => {
         return;
     }
 
-    sendEmail("https://ordanael-email-api.vercel.app/api/v1/email", formData);
+    sendEmail("https://rockyracum-email-api.vercel.app/api/v1/email", formData);
 });
 
 async function getFormData() {
