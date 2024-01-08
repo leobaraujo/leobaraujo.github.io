@@ -249,10 +249,10 @@ menu {
 
 /* COMPONENTS */
 .header {
-    position: sticky;
+    position: fixed;
+    width: 100vw;
     top: 0;
     z-index: 100;
-    margin-bottom: 1em;
     background-color: rgba(255, 255, 255, 0.5);
     -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
             box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
@@ -292,6 +292,7 @@ menu {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    padding: 0;
     padding-top: 3em;
     padding-bottom: 2em;
 }
@@ -324,8 +325,12 @@ menu {
     top: -100vh;
 }
 
+.hamburger {
+    margin-right: 15px;
+}
+
 #home {
-    height: 80vh;
+    min-height: 100vh;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -340,10 +345,16 @@ menu {
 
 .hero__img {
     margin-bottom: 6em;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
 }
 
 .hero__img img {
-    max-width: 100%;
+    max-width: 80%;
 }
 
 .hero__maintxt {
@@ -685,6 +696,10 @@ menu {
 
     .hero__maintxt {
         font-size: 3em;
+    }
+
+    .hero__img {
+        margin-bottom: 0;
     }
 
     .experience__container {
