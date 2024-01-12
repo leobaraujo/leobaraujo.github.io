@@ -1,3 +1,13 @@
+document.body.onscroll = () => {
+    const headerElement = document.querySelector("header.header");
+
+    if (window.scrollY > 0) {
+        headerElement.classList.add("header--scrolled");
+    } else {
+        headerElement.classList.remove("header--scrolled");
+    }
+};
+
 const hamburgerBtnElement = document.querySelector("button.hamburger");
 const headerMenuNavElement = document.querySelector("nav.header__menu");
 

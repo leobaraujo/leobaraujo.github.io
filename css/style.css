@@ -393,8 +393,8 @@ menu {
     position: absolute;
     top: 0;
     left: -3px;
-    background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), color-stop(50%, rgba(188, 54, 201, 0.32)), to(rgba(255, 255, 255, 0)));
     background: -o-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(188, 54, 201, 0.32) 50%, rgba(255, 255, 255, 0) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), color-stop(50%, rgba(188, 54, 201, 0.32)), to(rgba(255, 255, 255, 0)));
     background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(188, 54, 201, 0.32) 50%, rgba(255, 255, 255, 0) 100%);
 }
 
@@ -671,17 +671,65 @@ menu {
         text-align: center;
     }
 
+    .header {
+        -webkit-box-shadow: none;
+                box-shadow: none;
+        -webkit-backdrop-filter: blur(0);
+                backdrop-filter: blur(0);
+        background-color: transparent;
+        -webkit-transition: background-color 0.3s ease;
+        -o-transition: background-color 0.3s ease;
+        transition: background-color 0.3s ease;
+    }
+    
+    .header--scrolled {
+        background-color: rgba(188, 54, 201, 0.6);
+        -webkit-backdrop-filter: blur(4px);
+                backdrop-filter: blur(4px);
+    }
+
     .header__menu {
-        width: 32vw;
-        max-width: 256px;
+        position: initial;
+        width: initial;
+        background-color: transparent;
+        -webkit-box-shadow: none;
+                box-shadow: none;
+        -webkit-transition: none;
+        -o-transition: none;
+        transition: none;
     }
 
     .header__menu menu {
-        width: -webkit-fit-content;
-        width: -moz-fit-content;
-        width: fit-content;
-        margin: 3em auto;
-        padding: 0;
+        padding: 1em;
+        margin: 0;
+        margin-right: 1em;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+    }
+
+    .header__menu a {
+        -webkit-transition: color 0.3s ease;
+        -o-transition: color 0.3s ease;
+        transition: color 0.3s ease;;
+    }
+
+    .header__menu a:hover {
+        color: var(--color-action);
+    }
+
+    .header--scrolled a {
+        color: #FFF;
+    }
+
+    .header__menu .title::before,
+    .header__menu .title::after {
+        display: none;
+    }
+
+    button.hamburger {
+        display: none;
     }
 
     #home {
