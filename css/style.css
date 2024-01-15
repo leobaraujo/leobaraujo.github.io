@@ -73,6 +73,29 @@
     }
 }
 
+@-webkit-keyframes rotate {
+    from {
+        -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+    }
+
+    to {
+        -webkit-transform: rotate(360deg);
+                transform: rotate(360deg);
+    }
+}
+@keyframes rotate {
+    from {
+        -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+    }
+
+    to {
+        -webkit-transform: rotate(360deg);
+                transform: rotate(360deg);
+    }
+}
+
 /* STYLE */
 body {
     font-family: "Roboto", sans-serif;
@@ -499,6 +522,15 @@ div.container::before {
 
 .skill__container {
     margin-bottom: 3em;
+}
+
+.rotate--animation {
+    -webkit-animation: rotate 6s linear 0s infinite;
+            animation: rotate 6s linear 0s infinite;
+}
+
+.rotate--animation i[aria-label="React"] {
+    margin-right: 0;
 }
 
 .project__container {
