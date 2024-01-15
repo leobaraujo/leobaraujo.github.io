@@ -25,6 +25,25 @@ hamburgerBtnElement.addEventListener("click", () => {
     headerMenuNavElement.classList.toggle("header__menu--visible");
 });
 
+const expandProjectsElement = document.querySelector("span.project__expand");
+
+expandProjectsElement.addEventListener("click", (e) => {
+    const expandableProjectsElement = document.querySelector("div.projects__expandable");
+    const defaultShowMoreText = "Mostrar mais projetos";
+    const defaultShowLessText = "Esconder projetos";
+
+    if (expandProjectsElement.innerHTML.trim() === defaultShowMoreText) {
+        expandProjectsElement.innerHTML = defaultShowLessText;
+        expandProjectsElement.setAttribute("data-content", defaultShowLessText);
+    } else {
+        expandProjectsElement.innerHTML = defaultShowMoreText;
+        expandProjectsElement.setAttribute("data-content", defaultShowMoreText);
+    }
+
+    expandableProjectsElement.classList.toggle("collapsed");
+    expandableProjectsElement.classList.toggle("expanded");
+});
+
 const contactFormElement = document.querySelector("#contact__form");
 const emailFeedbackElement = document.querySelector("#util-email-feedback");
 

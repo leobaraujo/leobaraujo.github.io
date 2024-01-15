@@ -533,10 +533,19 @@ div.container::before {
     margin-right: 0;
 }
 
+#projetos .col.s12,
+#projetos .projects__expandable {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 2em;
+}
+
 .project__container {
     max-width: 60vw;
     margin: auto;
-    margin-bottom: 2em;
     padding: 1em;
     border-radius: 8px;
     display: -webkit-box;
@@ -605,6 +614,48 @@ div.container::before {
 .project__action button:hover {
     background-color: var(--color-action);
     border-color: transparent;
+}
+
+.project__expand {
+    margin: auto;
+    padding: 16px 48px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #555;
+    border: 1px solid #555;
+    background-color: transparent;
+    cursor: pointer;
+    position: relative;
+}
+
+.project__expand::before {
+    content: attr(data-content);
+    padding: 16px 48px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: transparent;
+    background-color: var(--color-action);
+    position: absolute;
+    bottom: -8px;
+    right: -8px;
+    z-index: -1;
+    -webkit-transition: all 0.32s ease;
+    -o-transition: all 0.32s ease;
+    transition: all 0.32s ease;
+}
+
+.project__expand:hover::before {
+    bottom: 0;
+    right: 0;
+}
+
+.projects__expandable.collapsed {
+    height: 0;
+    overflow-y: hidden;
+}
+
+.projects__expandable.expanded {
+    height: initial;
 }
 
 #contato.row {
@@ -892,18 +943,18 @@ div.container::before {
         margin-bottom: 0;
     }
 
-    #projetos .col.s12 {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -ms-flex-wrap: wrap;
-            flex-wrap: wrap;
-        gap: 2em;
-    }
-
     .project__container {
         max-width: 20vw;
         margin: 0;
+    }
+
+    .project__expand {
+        display: none;
+    }
+
+    .projects__expandable.collapsed {
+        height: initial;
+        overflow-y: initial;
     }
 
     .contact__container {
