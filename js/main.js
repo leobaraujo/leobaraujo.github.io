@@ -26,6 +26,18 @@ hamburgerBtnElement.addEventListener("click", () => {
 });
 
 const contactFormElement = document.querySelector("#contact__form");
+const emailFeedbackElement = document.querySelector("#util-email-feedback");
+
+function setFeedbackMessage(cssClass, message) {
+    const TIMEOUT_DELAY = 3000;
+
+    emailFeedbackElement.classList.add(cssClass);
+    emailFeedbackElement.innerHTML = message;
+
+    setTimeout(() => {
+        emailFeedbackElement.classList.remove(cssClass);
+    }, TIMEOUT_DELAY);
+}
 
 contactFormElement.addEventListener("submit", async (e) => {
     e.preventDefault();
@@ -33,7 +45,7 @@ contactFormElement.addEventListener("submit", async (e) => {
     const formData = await getFormData();
 
     if (formData.grecaptcha.length === 0) {
-        alert("Por favor, verifique se você não é um robô.");
+        setFeedbackMessage("error", "Por favor, verifique se você não é um robô.");
         return;
     }
 
@@ -50,6 +62,11 @@ async function getFormData() {
 }
 
 function sendEmail(addressURL, formData) {
+    const sendEmailButtonElement = document.querySelector("#sendEmailBtn");
+    sendEmailButtonElement.disabled = true;
+
+    setFeedbackMessage("info", "Enviando email...");
+
     fetch(addressURL, {
         headers: {
             "Content-Type": "application/json",
@@ -57,12 +74,20 @@ function sendEmail(addressURL, formData) {
         method: "POST",
         body: JSON.stringify(formData),
     })
-        .then(() => {
-            console.log("Email enviado");
-            clearFormInputs();
+        .then((res) => {
+            if (res.status === 200) {
+                setFeedbackMessage("success", "Email enviado");
+                clearFormInputs();
+                return;
+            }
+
+            setFeedbackMessage("error", "Não foi possível enviar o email");
         })
         .catch(() => {
-            console.error("Não foi possível enviar o email");
+            setFeedbackMessage("error", "Não foi possível enviar o email");
+        })
+        .finally(() => {
+            sendEmailButtonElement.disabled = false;
         });
 }
 
