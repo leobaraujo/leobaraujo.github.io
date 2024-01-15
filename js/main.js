@@ -1,12 +1,20 @@
+const arrowUpElement = document.querySelector("#util-arrow-up");
+
 document.body.onscroll = () => {
     const headerElement = document.querySelector("header.header");
 
     if (window.scrollY > 0) {
         headerElement.classList.add("header--scrolled");
+        arrowUpElement.classList.remove("hidden");
     } else {
         headerElement.classList.remove("header--scrolled");
+        arrowUpElement.classList.add("hidden");
     }
 };
+
+arrowUpElement.addEventListener("click", (e) => {
+    window.scrollTo(0, 0);
+});
 
 const hamburgerBtnElement = document.querySelector("button.hamburger");
 const headerMenuNavElement = document.querySelector("nav.header__menu");
