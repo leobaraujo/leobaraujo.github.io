@@ -662,8 +662,8 @@ div.container::before {
     margin-bottom: 20vh;
 }
 
-.contact__container .contact:first-child {
-    margin-bottom: 1em;
+.contact__container .contact:nth-child(2) {
+    margin: 1em 0;
 }
 
 .contact__container span {
@@ -722,6 +722,20 @@ div.container::before {
 
 .contact-btn:disabled::before {
     background-color: #ccc;
+}
+
+#whatsapp-action {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    cursor: pointer;
+}
+
+#whatsapp-action img {
+    width: 32px;
 }
 
 .footer__link {
@@ -977,6 +991,16 @@ div.container::before {
         -webkit-box-direction: normal;
             -ms-flex-direction: column;
                 flex-direction: column;
+    }
+
+    #whatsapp-action {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+                justify-content: center;
     }
 
     #contact__form {

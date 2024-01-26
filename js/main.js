@@ -114,3 +114,9 @@ function clearFormInputs() {
     document.querySelector("#contato .contact__email").value = "";
     document.querySelector("#contato .contact__message").value = "";
 }
+
+const whatsappBtnElement = document.querySelector("#whatsapp-action");
+
+whatsappBtnElement.addEventListener("click", (e) => {
+    window.open(atob("aHR0cHM6Ly9hcGkud2hhdHNhcHAuY29tL3NlbmQ/cGhvbmU9NTUzMTk5OTkzOTMyOA=="), "_blank");
+});
