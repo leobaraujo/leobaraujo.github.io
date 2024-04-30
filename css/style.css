@@ -252,7 +252,7 @@ menu {
     text-transform: uppercase;
     font-weight: 700;
     line-height: 2em;
-    color: var(--color-primary);
+    color: #fff;
     position: absolute;
     top: 50%;
     left: 0;
@@ -260,8 +260,7 @@ menu {
         -ms-transform: translateY(-50%);
             transform: translateY(-50%);
     width: 100%;
-    background-color: #555;
-    opacity: 0.8;
+    background-color: #ffcc00;
 }
 
 .contact-btn {
@@ -596,7 +595,8 @@ div.container::before {
 }
 
 .project__action {
-    margin: auto;
+    margin: 0 auto;
+    margin-top: auto;
 }
 
 .project__action button {
