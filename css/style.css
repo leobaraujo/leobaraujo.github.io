@@ -595,25 +595,29 @@ div.container::before {
 }
 
 .project__action {
-    margin: 0 auto;
+    margin: 0;
+    margin-left: auto;
     margin-top: auto;
 }
 
 .project__action button {
-    padding: 8px 24px;
-    border-radius: 6px;
-    border: 2px solid #555;
+    border: 0;
     background-color: transparent;
-    color: #555;
-    font-weight: 500;
-    -webkit-transition: background-color 0.32s ease, border-color 0.48s ease;
-    -o-transition: background-color 0.32s ease, border-color 0.48s ease;
-    transition: background-color 0.32s ease, border-color 0.48s ease;
+    color: var(--color-action);
 }
 
-.project__action button:hover {
-    background-color: var(--color-action);
-    border-color: transparent;
+.project__action button::after {
+    content: "➔";
+    position: relative;
+    top: 0;
+    left: 4px;
+    -webkit-transition: left 0.3s ease;
+    -o-transition: left 0.3s ease;
+    transition: left 0.3s ease;
+}
+
+.project__action button:hover::after {
+    left: 8px;
 }
 
 .project__expand {
