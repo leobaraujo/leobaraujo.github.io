@@ -847,6 +847,10 @@ div.container::before {
     margin-right: 8px;
 }
 
+.hamburger-inner, .hamburger-inner:after, .hamburger-inner:before {
+    background-color: #FFF;
+}
+
 /* LARGE SCREENS */
 @media (min-width: 768px) {
     main {
