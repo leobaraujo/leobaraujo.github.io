@@ -242,12 +242,12 @@ menu {
     color: #22bb33;
 } */
 
-.development .project__image {
+.label .project__image {
     position: relative;
 }
 
-.development .project__image::after {
-    content: "Em desenvolvimento";
+.label .project__image::after {
+    content: ".";
     text-align: center;
     text-transform: uppercase;
     font-weight: 700;
@@ -260,7 +260,17 @@ menu {
         -ms-transform: translateY(-50%);
             transform: translateY(-50%);
     width: 100%;
+    background-color: transparent;
+}
+
+.label--development .project__image::after {
+    content: "Em desenvolvimento";
     background-color: #ffcc00;
+}
+
+.label--canceled .project__image::after {
+    content: "Cancelado";
+    background-color: #7F8C8D;
 }
 
 .contact-btn {
