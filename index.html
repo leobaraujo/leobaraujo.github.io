@@ -1,36 +1,54 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-        <meta name="title" content="Leandro Araújo - Programador Backend" />
-        <meta name="description" content="Portfólio desenvolvedor backend" />
-        <meta name="keywords" content="portfolio, desenvolvedor, backend, frontend, Backend, java, react" />
+
+        <title>Leandro Araújo | Desenvolvedor Full Stack</title>
+
+        <meta name="description" content="Portfólio de Leandro Araújo, desenvolvedor Full Stack especializado em aplicações web, APIs e soluções digitais." />
         <meta name="robots" content="index, follow" />
         <meta name="author" content="Leandro Araújo" />
+
         <link rel="canonical" href="https://leobaraujo.github.io/" />
+
+        <!-- Open Graph -->
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://leobaraujo.github.io/" />
+        <meta property="og:title" content="Leandro Araújo | Desenvolvedor Full Stack" />
+        <meta
+            property="og:description"
+            content="Portfólio de Leandro Araújo, desenvolvedor Full Stack especializado em aplicações web, APIs e soluções digitais."
+        />
+        <meta property="og:site_name" content="Leandro Araújo" />
+
+        <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
+
+        <!-- Icons -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css" />
+
+        <!-- Styles -->
         <link rel="stylesheet" href="css/normalize.min.css" />
         <link rel="stylesheet" href="css/hamburgers.min.css" />
         <link rel="stylesheet" href="css/materialize.grid.css" />
         <link rel="stylesheet" href="css/style.css" />
-        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+
+        <!-- Favicon -->
+        <link rel="icon" href="favicon.ico" type="image/x-icon" />
+
+        <!-- Scripts -->
         <script async defer src="https://www.google.com/recaptcha/api.js"></script>
         <script async src="js/flexibility.js"></script>
-        <!--[if lt IE 9]>
-            <script src="js/html5shiv.min.js"></script>
-        <![endif]-->
         <script defer src="js/main.js"></script>
-        <title>Leandro Araújo - Programador Full Stack</title>
     </head>
+
     <body>
         <header class="header">
-            <nav class="header__menu header__menu--hidden">
-                <menu>
+            <nav class="header__menu header__menu--hidden" aria-label="Navegação principal">
+                <ul>
                     <li>
                         <a class="title" href="#home">Home</a>
                     </li>
@@ -38,7 +56,7 @@
                         <a class="title" href="#experiencia">Experiência</a>
                     </li>
                     <li>
-                        <a class="title" href="#habilidades">Habilidades</a>
+                        <a class="title" href="#tecnologias">Tecnologias</a>
                     </li>
                     <li>
                         <a class="title" href="#projetos">Projetos</a>
@@ -46,315 +64,423 @@
                     <li>
                         <a class="title" href="#contato">Contato</a>
                     </li>
-                </menu>
+                </ul>
             </nav>
-            <button class="hamburger hamburger--spin" type="button">
-                <span class="hamburger-box">
+
+            <button class="hamburger hamburger--spin" type="button" aria-label="Abrir menu" aria-expanded="false">
+                <span class="hamburger-box" aria-hidden="true">
                     <span class="hamburger-inner"></span>
                 </span>
             </button>
         </header>
+
         <div class="container">
-            <!-- HERO -->
-            <main class="row" id="home">
-                <div class="col s12">
-                    <h1 class="hero__maintxt"><span>Leandro Araújo.</span><br />Programador Full Stack</h1>
-                    <p class="hero__txt">Desenvolvendo aplicativos profissionais desde 2020.</p>
-                    <a class="hero__contact" href="#contato">
-                        <button class="contact-btn" data-content="Contato">Contato</button>
-                    </a>
-                </div>
+            <main>
+                <!-- HERO -->
+                <section class="row" id="home" aria-labelledby="hero-title">
+                    <div class="col s12">
+                        <h1 id="hero-title" class="hero__maintxt">
+                            <span>Leandro Araújo.</span><br />
+                            Desenvolvedor Full Stack
+                        </h1>
+                        <p class="hero__txt">Desenvolvo aplicações web, APIs e soluções digitais para transformar ideias em produtos funcionais.</p>
+                        <a class="contact-btn" href="#contato">Entrar em contato</a>
+                    </div>
+                </section>
+
+                <!-- EXPERIENCE -->
+                <section class="row" id="experiencia" aria-labelledby="experiencia-title">
+                    <h2 id="experiencia-title" class="title">EXPERIÊNCIA</h2>
+                    <div class="col s12">
+                        <div class="experience__container">
+                            <article class="experience">
+                                <h3>Desenvolvedor Decidim - Plataforma de Participação Cidadã Digital</h3>
+                                <span class="experience__date"> 2025 - Atualmente </span>
+                                <p>
+                                    Desenvolvimento e customização de aplicações baseadas em Decidim, plataforma open source para participação cidadã digital,
+                                    com foco em integrações com sistemas públicos e na melhoria contínua da experiência do usuário em processos participativos
+                                    online.
+                                </p>
+                            </article>
+                            <article class="experience">
+                                <h3>Desenvolvedor Freelancer - Criação de Sites e Sistemas Web</h3>
+                                <span class="experience__date"> 2021 - Atualmente </span>
+                                <p>
+                                    Atuação no desenvolvimento de sites, aplicações e sistemas web, acompanhando projetos desde a definição da solução até sua
+                                    implementação. A experiência também envolve autogerenciamento, organização de projetos e aprimoramento técnico contínuo.
+                                </p>
+                            </article>
+                            <!--
+                            <article class="experience">
+                                <h3>Análise e Desenvolvimento de Sistemas</h3>
+                                <span class="experience__date"> 2021 - 2024 </span>
+                                <p>
+                                    Formação voltada ao desenvolvimento de soluções tecnológicas, abrangendo programação, banco de dados, engenharia de
+                                    software, estruturas de dados, modelagem de sistemas e boas práticas de desenvolvimento.
+                                </p>
+                            </article>
+                            <article class="experience">
+                                <h3>Desenvolvimento Autodidata</h3>
+                                <span class="experience__date"> Desde 2019 </span>
+                                <p>
+                                    Aprendizado contínuo por meio de projetos práticos, estudos independentes e exploração de diferentes tecnologias e
+                                    ferramentas de desenvolvimento de software.
+                                </p>
+                            </article>
+                            -->
+                        </div>
+                    </div>
+                </section>
+
+                <!-- SKILLS -->
+                <section class="row" id="tecnologias" aria-labelledby="tecnologias-title">
+                    <h2 id="tecnologias-title" class="title">TECNOLOGIAS</h2>
+
+                    <!-- FRONTEND -->
+                    <div class="col s12 m4">
+                        <div class="skill__container">
+                            <h3 class="subtitle mt-0">Frontend</h3>
+
+                            <div class="tooltip">
+                                <i aria-hidden="true" class="devicon-html5-plain colored"></i>
+                                <span class="tooltiptext">HTML5</span>
+                            </div>
+
+                            <div class="tooltip">
+                                <i aria-hidden="true" class="devicon-css3-plain colored"></i>
+                                <span class="tooltiptext">CSS3</span>
+                            </div>
+
+                            <div class="tooltip">
+                                <i aria-hidden="true" class="devicon-javascript-plain colored"></i>
+                                <span class="tooltiptext">JavaScript</span>
+                            </div>
+
+                            <div class="tooltip">
+                                <div class="rotate--animation">
+                                    <i aria-hidden="true" class="devicon-react-original colored"></i>
+                                </div>
+                                <span class="tooltiptext">React</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- BACKEND -->
+                    <div class="col s12 m4">
+                        <div class="skill__container">
+                            <h3 class="subtitle mt-0">Backend</h3>
+
+                            <div class="tooltip">
+                                <i aria-hidden="true" class="devicon-ruby-plain colored"></i>
+                                <span class="tooltiptext">Ruby</span>
+                            </div>
+
+                            <div class="tooltip">
+                                <i aria-hidden="true" class="devicon-rails-plain colored"></i>
+                                <span class="tooltiptext">Ruby on Rails</span>
+                            </div>
+
+                            <div class="tooltip">
+                                <i aria-hidden="true" class="devicon-nodejs-plain colored"></i>
+                                <span class="tooltiptext">Node.js</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- OTHER -->
+                    <div class="col s12 m4">
+                        <div class="skill__container mb-o">
+                            <h3 class="subtitle mt-0">Outros</h3>
+
+                            <div class="tooltip">
+                                <i aria-hidden="true" class="devicon-postgresql-plain colored"></i>
+                                <span class="tooltiptext">PostgreSQL</span>
+                            </div>
+
+                            <div class="tooltip">
+                                <i aria-hidden="true" class="devicon-mongodb-plain colored"></i>
+                                <span class="tooltiptext">MongoDB</span>
+                            </div>
+
+                            <div class="tooltip">
+                                <i aria-hidden="true" class="devicon-git-plain colored"></i>
+                                <span class="tooltiptext">Git</span>
+                            </div>
+
+                            <div class="tooltip">
+                                <i aria-hidden="true" class="devicon-docker-plain colored"></i>
+                                <span class="tooltiptext">Docker</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- PROJECTS -->
+                <section class="row" id="projetos" aria-labelledby="projetos-title">
+                    <h2 id="projetos-title" class="title">PROJETOS</h2>
+
+                    <div class="col s12">
+                        <!-- Rails -->
+                        <article class="project__container label label--development">
+                            <div class="project__image">
+                                <img loading="lazy" src="images/api.webp" alt="Projetos desenvolvidos com Ruby on Rails" />
+                            </div>
+
+                            <div class="project__name">
+                                <h3>Projetos em Rails</h3>
+                            </div>
+
+                            <p>
+                                Projetos e aplicações desenvolvidos com Ruby e Ruby on Rails, explorando desenvolvimento web, APIs e arquitetura de aplicações.
+                            </p>
+
+                            <div class="project__badges">
+                                <span class="badge">Ruby</span>
+                                <span class="badge">Ruby on Rails</span>
+                            </div>
+                        </article>
+
+                        <!-- Real-Time Chat -->
+                        <article class="project__container">
+                            <div class="project__image">
+                                <img loading="lazy" src="images/proj-realtime.webp" alt="Aplicação de chat em tempo real" />
+                            </div>
+
+                            <div class="project__name">
+                                <h3>Real-Time Chat</h3>
+                            </div>
+
+                            <p>
+                                Aplicação de chat em tempo real desenvolvida com Spring Boot e WebSocket, permitindo comunicação bidirecional entre usuários
+                                conectados.
+                            </p>
+
+                            <div class="project__badges">
+                                <span class="badge">Java</span>
+                                <span class="badge">Spring Boot</span>
+                                <span class="badge">WebSocket</span>
+                            </div>
+
+                            <div class="project__action">
+                                <a href="https://github.com/leobaraujo/java-real-time-chat" target="_blank" rel="noopener noreferrer">Visualizar projeto</a>
+                            </div>
+                        </article>
+
+                        <!-- PomodoroFX -->
+                        <article class="project__container">
+                            <div class="project__image">
+                                <img loading="lazy" src="images/proj-pomodoroFX.webp" alt="Aplicação desktop PomodoroFX desenvolvida com JavaFX" />
+                            </div>
+
+                            <div class="project__name">
+                                <h3>PomodoroFX</h3>
+                            </div>
+
+                            <p>Aplicação desktop para gerenciamento de sessões de produtividade baseada na técnica Pomodoro.</p>
+
+                            <div class="project__badges">
+                                <span class="badge">Java</span>
+                                <span class="badge">JavaFX</span>
+                                <span class="badge">Scene Builder</span>
+                            </div>
+
+                            <div class="project__action">
+                                <a href="https://github.com/leobaraujo/javafx-pomodoro" target="_blank" rel="noopener noreferrer">Visualizar projeto</a>
+                            </div>
+                        </article>
+
+                        <div class="projects__expandable collapsed">
+                            <!-- Comanda Eletrônica API -->
+                            <article class="project__container">
+                                <div class="project__image">
+                                    <img loading="lazy" src="images/api.webp" alt="API de comanda eletrônica" />
+                                </div>
+
+                                <div class="project__name">
+                                    <h3>Comanda Eletrônica API</h3>
+                                </div>
+
+                                <p>API REST para gerenciamento de pedidos de um sistema de comanda eletrônica, utilizando Spring Boot, MySQL e Docker.</p>
+
+                                <div class="project__badges">
+                                    <span class="badge">Spring Boot</span>
+                                    <span class="badge">MySQL</span>
+                                    <span class="badge">Docker</span>
+                                </div>
+
+                                <div class="project__action">
+                                    <a href="https://github.com/leobaraujo/java-order-app" target="_blank" rel="noopener noreferrer">Visualizar projeto</a>
+                                </div>
+                            </article>
+
+                            <!-- Oli Saúde API -->
+                            <article class="project__container">
+                                <div class="project__image">
+                                    <img loading="lazy" src="images/api.webp" alt="API de avaliação de riscos de saúde" />
+                                </div>
+
+                                <div class="project__name">
+                                    <h3>Desafio Oli Saúde API</h3>
+                                </div>
+
+                                <p>API desenvolvida como desafio técnico para processamento e gerenciamento de dados relacionados a riscos de saúde.</p>
+
+                                <div class="project__badges">
+                                    <span class="badge">Spring Boot</span>
+                                    <span class="badge">PostgreSQL</span>
+                                    <span class="badge">Docker</span>
+                                </div>
+
+                                <div class="project__action">
+                                    <a href="https://github.com/leobaraujo/java-health-risks" target="_blank" rel="noopener noreferrer">Visualizar projeto</a>
+                                </div>
+                            </article>
+
+                            <!-- Email API -->
+                            <article class="project__container">
+                                <div class="project__image">
+                                    <img loading="lazy" src="images/api.webp" alt="API para envio de emails" />
+                                </div>
+
+                                <div class="project__name">
+                                    <h3>Envio de Email API</h3>
+                                </div>
+
+                                <p>API desenvolvida para integração de envio de emails em aplicações utilizando Java e Spring Boot.</p>
+
+                                <div class="project__badges">
+                                    <span class="badge">Java</span>
+                                    <span class="badge">Spring Boot</span>
+                                </div>
+
+                                <div class="project__action">
+                                    <a href="https://github.com/leobaraujo/java-mail-sender" target="_blank" rel="noopener noreferrer">Visualizar projeto</a>
+                                </div>
+                            </article>
+
+                            <!-- Netflix Clone -->
+                            <article class="project__container">
+                                <div class="project__image">
+                                    <img loading="lazy" src="images/proj-netflix.webp" alt="Interface de clone do Netflix desenvolvida com React" />
+                                </div>
+
+                                <div class="project__name">
+                                    <h3>Netflix Clone</h3>
+                                </div>
+
+                                <p>
+                                    Interface inspirada em plataformas de streaming, desenvolvida para praticar componentes, estado e organização de uma
+                                    aplicação React.
+                                </p>
+
+                                <div class="project__badges">
+                                    <span class="badge">React</span>
+                                    <span class="badge">TypeScript</span>
+                                    <span class="badge">styled-components</span>
+                                </div>
+
+                                <div class="project__action">
+                                    <a href="https://github.com/leobaraujo/react-netflix-clone" target="_blank" rel="noopener noreferrer">
+                                        Visualizar projeto
+                                    </a>
+                                </div>
+                            </article>
+
+                            <!-- Spotify Clone -->
+                            <article class="project__container">
+                                <div class="project__image">
+                                    <img
+                                        loading="lazy"
+                                        src="images/proj-spotify.webp"
+                                        alt="Interface de clone do Spotify desenvolvida com HTML, CSS e JavaScript"
+                                    />
+                                </div>
+
+                                <div class="project__name">
+                                    <h3>Spotify Clone</h3>
+                                </div>
+
+                                <p>Interface web inspirada em uma plataforma de streaming de música, desenvolvida com HTML, CSS e JavaScript.</p>
+
+                                <div class="project__badges">
+                                    <span class="badge">HTML</span>
+                                    <span class="badge">CSS</span>
+                                    <span class="badge">JavaScript</span>
+                                </div>
+
+                                <div class="project__action">
+                                    <a href="https://github.com/leobaraujo/html-spotify-clone" target="_blank" rel="noopener noreferrer">
+                                        Visualizar projeto
+                                    </a>
+                                </div>
+                            </article>
+                        </div>
+
+                        <button type="button" class="project__expand" data-content="Mostrar mais projetos" aria-expanded="false">Mostrar mais projetos</button>
+                    </div>
+                </section>
+
+                <!-- CONTACT -->
+                <section class="row" id="contato" aria-labelledby="contato-title">
+                    <h2 id="contato-title" class="title">CONTATO</h2>
+
+                    <div class="col s12 contact__container">
+                        <div id="whatsapp-action" class="contact" role="button" tabindex="0" aria-label="Entrar em contato pelo WhatsApp">
+                            <img src="./images/whatsapp.svg" alt="" aria-hidden="true" />
+                            <span>WhatsApp</span>
+                        </div>
+
+                        <div class="contact">
+                            <a href="https://www.linkedin.com/in/leandroaraujowm/" target="_blank" rel="noopener noreferrer">
+                                <i class="devicon-linkedin-plain colored" aria-hidden="true"></i>
+                                <span>LinkedIn</span>
+                            </a>
+                        </div>
+
+                        <div class="contact">
+                            <a href="https://github.com/leobaraujo" target="_blank" rel="noopener noreferrer">
+                                <i class="devicon-github-original colored" aria-hidden="true"></i>
+                                <span>GitHub</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col s12">
+                        <form method="post" id="contact__form" aria-label="Formulário de contato">
+                            <label for="contact-email">E-mail</label>
+                            <input id="contact-email" class="contact__email" type="email" name="email" placeholder="E-mail" autocomplete="email" required />
+
+                            <label for="contact-message">Mensagem</label>
+                            <textarea
+                                id="contact-message"
+                                class="contact__message"
+                                name="message"
+                                rows="5"
+                                placeholder="Mensagem"
+                                minlength="4"
+                                required
+                            ></textarea>
+
+                            <div class="g-recaptcha" data-sitekey="6Leme8AkAAAAAE-CeW184w4HBZZzit9Vs3F-sti2"></div>
+
+                            <button id="sendEmailBtn" type="submit" class="contact-btn" data-content="Enviar">Enviar</button>
+                        </form>
+                    </div>
+                </section>
             </main>
-            <!-- EXPERIENCE -->
-            <section class="row" id="experiencia">
-                <h2 class="title">EXPERIÊNCIA</h2>
-                <div class="col s12">
-                    <div class="experience__container">
-                        <div class="experience">
-                            <h4>Desenvolvedor Decidim - Plataforma de Participação Cidadã Digital</h4>
-                            <span class="experience__date">2025 - Atualmente</span>
-                            <p>
-                                Trabalho desenvolvendo customizações no Decidim, plataforma open source para participação cidadã digital, com foco em
-                                integrações com sistemas públicos e na melhoria contínua da experiência do usuário em processos participativos online.
-                            </p>
-                        </div>
-                        <div class="experience">
-                            <h4>Desenvolvedor Freelancer - Criação de Sites e Sistemas Web</h4>
-                            <span class="experience__date">2021 - Atualmente</span>
-                            <p>
-                                Atuando como programador freelancer, desenvolvi habilidades essenciais como autogerenciamento, organização de projetos e
-                                aprimoramento técnico contínuo.
-                            </p>
-                        </div>
-                        <div class="experience">
-                            <h4>Análise e Desenvolvimento de Sistemas</h4>
-                            <span class="experience__date">2021 - 2024</span>
-                            <p>
-                                O curso é focado em desenvolver soluções tecnológicas eficientes para atender às necessidades de usuários e empresas, por meio
-                                de análises profundas. Abrange fundamentos de programação, banco de dados, engenharia de software, estrutura de dados, modelagem
-                                de sistemas e boas práticas de desenvolvimento.
-                            </p>
-                        </div>
-                        <div class="experience">
-                            <h4>Autodidata</h4>
-                            <span class="experience__date">2019</span>
-                            <p>
-                                Ser autodidata em programação vai além de apenas aprender a escrever código — é desenvolver uma mentalidade de aprendizado
-                                contínuo, adaptabilidade e capacidade de resolver problemas.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!-- SKILLS -->
-            <section class="row" id="habilidades">
-                <h2 class="title">HABILIDADES</h2>
-                <div class="col s12 m4">
-                    <div class="skill__container">
-                        <h3 class="subtitle mt-0" data-title-content="Frontend">Frontend</h3>
-                        <div class="tooltip">
-                            <i aria-label="HTML5" class="devicon-html5-plain colored"></i>
-                            <span class="tooltiptext">HTML</span>
-                        </div>
-                        <div class="tooltip">
-                            <i aria-label="CSS3" class="devicon-css3-plain colored"></i>
-                            <span class="tooltiptext">CSS</span>
-                        </div>
-                        <div class="tooltip">
-                            <i aria-label="JavaScript" class="devicon-javascript-plain colored"></i>
-                            <span class="tooltiptext">JavaScript</span>
-                        </div>
-                        <div class="tooltip">
-                            <div class="rotate--animation">
-                                <i aria-label="React" class="devicon-react-original colored"></i>
-                            </div>
-                            <span class="tooltiptext">React</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col s12 m4">
-                    <div class="skill__container">
-                        <h3 class="subtitle mt-0" data-title-content="Backend">Backend</h3>
-                        <div class="tooltip">
-                            <i aria-label="Ruby" class="devicon-ruby-plain colored"></i>
-                            <span class="tooltiptext">Ruby</span>
-                        </div>
-                        <div class="tooltip">
-                            <i aria-label="Ruby on Rails" class="devicon-rails-plain colored"></i>
-                            <span class="tooltiptext">Ruby on Rails</span>
-                        </div>
-                        <div class="tooltip">
-                            <i aria-label="Node.js" class="devicon-nodejs-plain colored"></i>
-                            <span class="tooltiptext">Node.js</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col s12 m4">
-                    <div class="skill__container mb-o">
-                        <h3 class="subtitle mt-0" data-title-content="Outros">Outros</h3>
-                        <div class="tooltip">
-                            <i aria-label="PostgreSQL" class="devicon-postgresql-plain colored"></i>
-                            <span class="tooltiptext">PostgreSQL</span>
-                        </div>
-                        <div class="tooltip">
-                            <i aria-label="MongoDB" class="devicon-mongodb-plain colored"></i>
-                            <span class="tooltiptext">MongoDB</span>
-                        </div>
-                        <div class="tooltip">
-                            <i aria-label="Git" class="devicon-git-plain colored"></i>
-                            <span class="tooltiptext">Git</span>
-                        </div>
-                        <div class="tooltip">
-                            <i aria-label="Docker" class="devicon-docker-plain colored"></i>
-                            <span class="tooltiptext">Docker</span>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!-- PROJECTS -->
-            <section class="row" id="projetos">
-                <h2 class="title">PROJETOS</h2>
-                <div class="col s12">
-                    <div class="project__container label label--development">
-                        <div class="project__image">
-                            <img loading="lazy" src="images/api.webp" alt="Projetos Rails" />
-                        </div>
-                        <div class="project__name">
-                            <h4>Projetos em Rails</h4>
-                        </div>
-                        <div class="project__badges">
-                            <div aria-label="tag de habilidade" class="badge">Ruby</div>
-                            <div aria-label="tag de habilidade" class="badge">Ruby on Rails</div>
-                        </div>
-                    </div>
-                    <div class="project__container">
-                        <div class="project__image">
-                            <img loading="lazy" src="images/proj-realtime.webp" alt="Chat em tempo real" />
-                        </div>
-                        <div class="project__name">
-                            <h4>Real-Time Chat</h4>
-                        </div>
-                        <div class="project__badges">
-                            <div aria-label="tag de habilidade" class="badge">Java</div>
-                            <div aria-label="tag de habilidade" class="badge">Spring Boot</div>
-                            <div aria-label="tag de habilidade" class="badge">WebSocket</div>
-                        </div>
-                        <div class="project__action">
-                            <a href="https://github.com/leobaraujo/java-real-time-chat" target="_blank">
-                                <button>Visualizar</button>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="project__container">
-                        <div class="project__image">
-                            <img loading="lazy" src="images/proj-pomodoroFX.webp" alt="JavaFX desktop app" />
-                        </div>
-                        <div class="project__name">
-                            <h4>PomodoroFX</h4>
-                        </div>
-                        <div class="project__badges">
-                            <div aria-label="tag de habilidade" class="badge">Java</div>
-                            <div aria-label="tag de habilidade" class="badge">JavaFX</div>
-                            <div aria-label="tag de habilidade" class="badge">Scene Builder</div>
-                        </div>
-                        <div class="project__action">
-                            <a href="https://github.com/leobaraujo/javafx-pomodoro" target="_blank">
-                                <button>Visualizar</button>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="projects__expandable collapsed">
-                        <div class="project__container">
-                            <div class="project__image">
-                                <img loading="lazy" src="images/api.webp" alt="API" />
-                            </div>
-                            <div class="project__name">
-                                <h4>Comanda Eletrônica API</h4>
-                            </div>
-                            <div class="project__badges">
-                                <div aria-label="tag de habilidade" class="badge">Spring Boot</div>
-                                <div aria-label="tag de habilidade" class="badge">MySQL</div>
-                                <div aria-label="tag de habilidade" class="badge">Docker</div>
-                            </div>
-                            <div class="project__action">
-                                <a href="https://github.com/leobaraujo/java-order-app" target="_blank">
-                                    <button>Visualizar</button>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="project__container">
-                            <div class="project__image">
-                                <img loading="lazy" src="images/api.webp" alt="API" />
-                            </div>
-                            <div class="project__name">
-                                <h4>Desafio Oli Saúde API</h4>
-                            </div>
-                            <div class="project__badges">
-                                <div aria-label="tag de habilidade" class="badge">Spring Boot</div>
-                                <div aria-label="tag de habilidade" class="badge">PostgreSQL</div>
-                                <div aria-label="tag de habilidade" class="badge">Docker</div>
-                            </div>
-                            <div class="project__action">
-                                <a href="https://github.com/leobaraujo/java-health-risks" target="_blank">
-                                    <button>Visualizar</button>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="project__container">
-                            <div class="project__image">
-                                <img loading="lazy" src="images/api.webp" alt="API" />
-                            </div>
-                            <div class="project__name">
-                                <h4>Envio de Email API</h4>
-                            </div>
-                            <div class="project__badges">
-                                <div aria-label="tag de habilidade" class="badge">Java</div>
-                                <div aria-label="tag de habilidade" class="badge">Spring Boot</div>
-                            </div>
-                            <div class="project__action">
-                                <a href="https://github.com/leobaraujo/java-mail-sender" target="_blank">
-                                    <button>Visualizar</button>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="project__container">
-                            <div class="project__image">
-                                <img loading="lazy" src="images/proj-netflix.webp" alt="Netflix clone" />
-                            </div>
-                            <div class="project__name">
-                                <h4>Netflix Clone</h4>
-                            </div>
-                            <div class="project__badges">
-                                <div aria-label="tag de habilidade" class="badge">React</div>
-                                <div aria-label="tag de habilidade" class="badge">TypeScript</div>
-                                <div aria-label="tag de habilidade" class="badge">styled-components</div>
-                            </div>
-                            <div class="project__action">
-                                <a href="https://github.com/leobaraujo/react-netflix-clone" target="_blank">
-                                    <button>Visualizar</button>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="project__container">
-                            <div class="project__image">
-                                <img loading="lazy" src="images/proj-spotify.webp" alt="Spotify clone" />
-                            </div>
-                            <div class="project__name">
-                                <h4>Spotify Clone</h4>
-                            </div>
-                            <div class="project__badges">
-                                <div aria-label="tag de habilidade" class="badge">HTML</div>
-                                <div aria-label="tag de habilidade" class="badge">CSS</div>
-                                <div aria-label="tag de habilidade" class="badge">JavaScript</div>
-                            </div>
-                            <div class="project__action">
-                                <a href="https://github.com/leobaraujo/html-spotify-clone" target="_blank">
-                                    <button>Visualizar</button>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <span class="project__expand" data-content="Mostrar mais projetos">Mostrar mais projetos</span>
-                </div>
-            </section>
-            <!-- CONTACT -->
-            <section class="row" id="contato">
-                <h2 class="title">CONTATO</h2>
-                <div class="col s12 contact__container">
-                    <div id="whatsapp-action" class="contact">
-                        <img src="./images/whatsapp.svg" alt="WhatsApp icon" />
-                        <span>WhatsApp</span>
-                    </div>
-                    <div class="contact">
-                        <a href="https://www.linkedin.com/in/leandroaraujowm/" target="_blank" rel="noopener noreferrer">
-                            <i class="devicon-linkedin-plain colored"></i>
-                            <span>@leandroaraujowm</span>
-                        </a>
-                    </div>
-                    <div class="contact">
-                        <a href="https://github.com/leobaraujo" target="_blank" rel="noopener noreferrer">
-                            <i class="devicon-github-original colored"></i>
-                            <span>@leobaraujo</span>
-                        </a>
-                    </div>
-                </div>
-                <div class="col s12">
-                    <form method="post" id="contact__form">
-                        <input class="contact__email" type="email" name="email" placeholder="E-mail" required />
-                        <textarea class="contact__message" name="message" cols="30" rows="5" placeholder="Mensagem" minlength="4" required></textarea>
-                        <div class="g-recaptcha" data-sitekey="6Leme8AkAAAAAE-CeW184w4HBZZzit9Vs3F-sti2"></div>
-                        <button id="sendEmailBtn" type="submit" class="contact-btn" data-content="Enviar">Enviar</button>
-                    </form>
-                </div>
-            </section>
-            <!-- UTILS -->
-            <span id="util-arrow-up" class="hidden" aria-label="Voltar ao topo">👆</span>
-            <span id="util-email-feedback"></span>
+
+            <!-- UTILITIES -->
+            <button id="util-arrow-up" class="hidden" type="button" aria-label="Voltar ao topo">👆</button>
+
+            <span id="util-email-feedback" aria-live="polite"></span>
         </div>
+
         <footer>
-            <span>
-                Design & code by&nbsp;<a class="footer__link" href="https://www.linkedin.com/in/leandroaraujowm/" target="_blank">Leandro</a>&nbsp;&copy; 2023
-            </span>
+            <p>
+                Design &amp; code by
+                <a class="footer__link" href="https://www.linkedin.com/in/leandroaraujowm/" target="_blank" rel="noopener noreferrer">Leandro Araújo</a>
+                &copy; 2023
+            </p>
         </footer>
     </body>
 </html>
